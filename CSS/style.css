@@ -118,15 +118,12 @@ nav.top{
     width : 100vw;
     position : fixed;
     z-index : 1000;
-    padding : 0 3rem;
+    padding : 0 2rem;
+    box-shadow : 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 
 nav.top ul{
-    line-height: 4rem;
-    float : right;
-}
-
-nav.top ul li{
+    margin-left: auto;
     list-style  :none;
 }
 
@@ -139,6 +136,7 @@ nav.top ul li a{
     color : blue;
     position : relative;
     outline: none;
+    line-height : 4rem;
 }
 
 nav.top ul li a::before,
@@ -176,6 +174,21 @@ nav.top ul li a:hover::after{
     opacity : 1;
 }
 
+.toggle-button{
+    width : 30px;
+    height : 20px;
+    position: absolute;
+    right : 0;
+    margin : 1.5rem 2.5rem;
+    display: none;
+}
+
+nav.top .toggle-button .line{
+    width : 100%;
+    height : 4px;
+    background-color: #0e2588;
+    border-radius: 50%;
+}
 
 /* ====================== Navbar End ====================== */
 
@@ -574,24 +587,15 @@ section.footer .bottom h3 span{
 
 @media(max-width : 710px){
     .navbar{
-        display : none;
+        visibility: hidden;
+    }
+
+    .toggle-button{
+        display: flex;
+        cursor : pointer;
+        transition: all 0.7s ease;
     }
     
-    nav.top .toggle-button{
-        width : 30px;
-        height : 20px;
-        position: absolute;
-        right : 0;
-        margin : 1.5rem 2rem;
-    }
-
-    nav.top .toggle-button .line{
-        width : 100%;
-        height : 3px;
-        background-color: #0f1f69;
-        border-radius: 50%;
-    }
-
     .toggler{
         flex-direction: column;
         align-items: center;
@@ -599,6 +603,7 @@ section.footer .bottom h3 span{
         padding : 0.5rem;
         margin-top : 2.5rem;
         display : flex;
+        visibility : visible;
     }
         
 }

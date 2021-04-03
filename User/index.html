@@ -11,18 +11,18 @@
 
 <body>
     <!-- ======================= Navbar Start ======================== -->
-    <nav class="top">
-        <ul class="navbar flex items-center">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+    <nav class="top flex">
+        <ul class="navbar toggler flex items-center">
+            <li><a href="#home" onclick="toggle()">Home</a></li>
+            <li><a href="#about" onclick="toggle()">About</a></li>
+            <li><a href="#services" onclick="toggle()">Services</a></li>
+            <li><a href="#contact" onclick="toggle()">Contact Us</a></li>
         </ul>
 
-        <div class="toggle-button flex flex-col justify-between" onclick="togglesys();">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
+        <div class="toggle-button flex flex-col justify-between" onclick="toggle(), tanimation()">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
         </div>
     </nav>
     <!-- ======================= Navbar End ========================= -->
@@ -243,11 +243,9 @@
     <!-- ====================== Footer Section End ===================== -->
 
     <script>
-        function togglesys(){
-            const tbtn = document.querySelector('.toggle-button');
+        function toggle(){
             const navbar = document.querySelector('.navbar');
-            tbtn.classList.toggle('.toggler');
-            navbar.classList.toggle('.navbar');
+            navbar.classList.toggle('toggler');
         }
     </script>
 </body>
