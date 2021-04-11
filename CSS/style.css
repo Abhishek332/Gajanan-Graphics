@@ -280,10 +280,6 @@ section.about{
     position: relative;
 }
 
-section.about .about-wrapper{
-    margin: -1rem 0rem 0.5rem;
-}
-
 section.about .about-wrapper .cover{
     height : 320px;
     width : 320px;
@@ -312,9 +308,7 @@ section.about .about-wrapper .cover .img-wrapper img{
     transform : translate(1rem, 1rem);
 }
 
-section.about .about-wrapper p{
-    max-width : 50rem;
-    min-width : 20rem;
+section.about .about-wrapper p{   
     font-style: italic;
     text-align : justify;
     margin : 2rem;
@@ -505,7 +499,7 @@ section.footer .top{
 
 section.footer .top .box{
     text-align : center;
-    margin : 2rem auto;
+    margin : 2rem 0;
 }
 
 section.footer .top .box h3{
@@ -585,7 +579,7 @@ section.footer .bottom h3 span{
     }
 }
 
-@media(max-width : 710px){
+@media(max-width : 710px){ 
     .navbar{
         visibility: hidden;
     }
@@ -593,7 +587,6 @@ section.footer .bottom h3 span{
     .toggle-button{
         display: flex;
         cursor : pointer;
-        transition: all 0.7s ease;
     }
     
     .toggler{
@@ -605,5 +598,20 @@ section.footer .bottom h3 span{
         display : flex;
         visibility : visible;
     }
-        
+
+    section.about{
+        padding : 2rem 0;
+    }
+
+    section.about .about-wrapper .cover{
+        transform : scale(0.9);
+    }
+
+    .contact{
+        flex-direction: column;
+    }
+
+    .banner>div:last-child{
+        display :none;
+    }
 }
