@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title></title>
+    <style>
+        .option-container{
+            padding : 20px 50px;
+            background: black;
+            height : 100px;
+            width : 100%;
+        }
+
+        .option-container .item-section select{
+            width : 100%;
+            padding: 10px;
+        }
+
+        .item-container .item-card{
+            height : 300px;
+            width : 500px;
+            border-radius : 20px;
+            box-shadow : 0px 0px 10px pink;
+            margin : 50px 20px;
+            /* z-index: 50000; */
+        }
+
+        .item-container .item-card .img-container{
+            position : relative;
+            height : 100%;
+            width : 50%;
+            border-radius : 20px 0px 0px 20px;
+            overflow : hidden;
+            background: pink;
+        }
+
+        .item-container .item-card .img-container img{
+            position : absolute;
+            width : 50%;
+            height : 50%;
+        }
+
+        .item-container .item-card .item-details{
+            padding : 20px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ======================= Navbar Start ======================== -->
+    <nav class="top flex">
+        <ul class="navbar flex items-center">
+            <li><a href="#home" onclick="toggle()">Home</a></li>
+            <li><a href="#about" onclick="toggle()">About</a></li>
+            <li><a href="#services" onclick="toggle()">Services</a></li>
+            <li><a href="#contact" onclick="toggle()">Contact Us</a></li>
+        </ul>
+
+        <div class="toggle-button flex flex-col justify-between" onclick="toggle(), tanimation()">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+    </nav>
+    <!-- ======================= Navbar End ========================= -->
+
+    <!-- ======================== Patrika Section ======================== -->
+    <div class ="item-section">
+        <div class="option-container">
+            <select name="patrika-option" id="patrika-option">
+                <option value="">option 1</option>
+                <option value="">option 1</option>
+                <option value="">option 1</option>
+                <option value="">option 1</option>
+                <option value="">option 1</option>
+                <option value="">option 1</option>
+            </select>
+        </div>
+        <div class="item-container flex flex-wrap justify-center">
+            <div class="item-card flex justify-between">
+                <div class="img-container flex justify-center items-center">
+                    <img src="../Images/Services/patrika.jpg" alt="">
+                </div>
+                <div class="item-details flex flex-col">
+                    <p>Patrika No. 25695</p>
+                    <p>Qty 1000 </p>
+                    <p>Rate 350</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="img-container">
+                    <img src="../Images/Services/patrika.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="img-container">
+                    <img src="../Images/Services/patrika.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ====================== Contact Us Section Start ===================== -->
+
+    <section id="contact" class="contact flex flex-wrap">
+        <div class="contact-info-wrapper flex1">
+            <h1 class="section-heading"><span>C</span>ontact <span>U</span>s</h1>
+            <div class="contact-info flex justify-center">
+                <div>
+                    <div class="flex items-center">
+                        <img src="../icons/phone.svg" alt="">
+                        <div class="flex flex-col">
+                            <h2>Call Us:</h2>
+                            <h3>+91 82238 95581</h3>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <img src="../icons/email.svg" alt="">
+                        <div class="flex flex-col">
+                            <h2>Email:</h2>
+                            <h3>support@gmail.com</h3>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <img src="../icons/timer.svg" alt="">
+                        <div class="flex flex-col">
+                            <h2>Working Hours:</h2>
+                            <h3>Everyday (9.00am - 9.00pm)</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="map flex1">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.098952548087!2d75.41855621445028!3d23.456894905843026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396475f7304b832b%3A0x8ea14dabacc70a11!2sShree%20Ji%20Hospital!5e0!3m2!1sen!2sin!4v1615736217580!5m2!1sen!2sin"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    <!-- ====================== Contact Us Section End ===================== -->
+
+
+    <!-- ====================== Footer Section Start ===================== -->
+    <section class="footer">
+        <div class="top flex justify-between">
+            <div class="box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="">Wedding Cards & Patrika</a></li>
+                    <li><a href="">Visiting/Business Card</a></li>
+                    <li><a href="">Pemplates</a></li>
+                    <li><a href="">Flex/Banner</a></li>
+                    <li><a href="">Frames</a></li>
+                </ul>
+            </div>
+            <div class="box flex flex-col items-center">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>
+                        <a href="">
+                            <div class="foot-link flex items-center">
+                                <img src="../icons/facebook.svg" alt="">
+                                <h4>Facebook</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="foot-link flex items-center">
+                                <img src="../icons/instagram.svg" alt="">
+                                <h4>Instagram</h4>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="foot-link flex items-center">
+                                <img src="../icons/twitter.svg" alt="">
+                                <h4>Twitter</h4>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom flex justify-between items-center flex-wrap">
+            <h3>Copyright @ 2021 | Gajanan Graphics</h3>
+            <h3>Designed by <span>Abhishek</span></h3>
+        </div>
+    </section>
+    <!-- ====================== Footer Section End ===================== -->
+
+    <script>
+        function toggle(){
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('toggler');
+        }
+    </script>
+</body>
+
+</html>

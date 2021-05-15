@@ -2,6 +2,7 @@
 *{
     margin : 0;
     padding: 0;
+    outline : none;
     box-sizing: border-box;
     font-family : "Raleway-Regular";
     scroll-behavior: smooth;
@@ -127,6 +128,10 @@ nav.top ul{
     list-style  :none;
 }
 
+nav.top ul li{
+    padding : 20px;
+}
+
 nav.top ul li a{
     text-decoration : none;
     padding : 0.5rem 1rem;
@@ -136,7 +141,6 @@ nav.top ul li a{
     color : blue;
     position : relative;
     outline: none;
-    line-height : 4rem;
 }
 
 nav.top ul li a::before,
@@ -554,6 +558,9 @@ section.footer .bottom h3 span{
 }
 /* =================== Footer Section End ==================== */
 
+.item-section{
+    padding-top : 60px;
+}
 
 
 /* =============================================================== */
@@ -615,3 +622,12 @@ section.footer .bottom h3 span{
         display :none;
     }
 }
+
+@media(max-width : 500px){
+    nav.top ul li a::before,
+    nav.top ul li a::after{
+        display : none;
+    }
+}
+
+/* =================== Media Query END ====================== */
